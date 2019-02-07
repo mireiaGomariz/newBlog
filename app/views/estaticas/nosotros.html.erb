@@ -1,2 +1,42 @@
+<% provide(:titulo, "Nosotros") %>
+
 <h1>Estaticas#nosotros</h1>
 <p>Find me in app/views/estaticas/nosotros.html.erb</p>
+
+<% if false %>
+  <% 5.times do |x|
+    puts x   # PUTS NO FUNCIONA EN RUBY
+  end %>
+
+  <% 5.times do |x| %>
+    <%= x %>
+  <% end %>
+<% end %>
+
+
+<%= @mesajes %>
+<!-- Salto de linea -->
+<br>
+<%= "el controller dice #{@mensajes}" %>
+
+<ul>
+    <% @usuarios.each do |i| %>
+    <%= "<li> #{i} </li>".html_safe %>
+    <% end %>
+</ul>
+
+<!-- <a href="/home/index">Home</a> -->
+
+<!-- <%= link_to 'Home', root_path %>
+<%= link_to 'Contacto', estaticas_contacto_path %> -->
+
+<!-- comando rake routes -->
+
+<!-- <%= link_to 'contacto',
+            {:controller=>'estaticas',
+             :action=> 'contacto',
+             :id=> 3,
+             :pagina=> 2
+             },
+             :class => 'my-class',
+             :target => '_blanck' %> -->
