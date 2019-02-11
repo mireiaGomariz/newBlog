@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_07_090401) do
+ActiveRecord::Schema.define(version: 2019_02_07_212643) do
 
   create_table "articulos", force: :cascade do |t|
     t.string "titulo"
     t.text "contenido"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "autor_id"
+    t.index ["autor_id"], name: "index_articulos_on_autor_id"
   end
 
   create_table "autors", force: :cascade do |t|

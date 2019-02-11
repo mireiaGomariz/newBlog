@@ -8,9 +8,14 @@ Rails.application.routes.draw do
     resources :comentarios
   end
 
-  get 'home/index'
-  root 'home#index'
+
+  #get 'home/index'
+  #root 'home#index'
+  root 'articulos#index'
+
   get 'estaticas/contacto'
   get 'estaticas/nosotros'
+
+  get 'path' => redirect('/')
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
