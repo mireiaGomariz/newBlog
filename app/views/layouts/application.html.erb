@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= yield(:titulo) %></title>
-    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,6 +11,9 @@
 
   <body>
     <%= render 'shared/header' %>
+    <div class="alert alert-info">
+
+    </div>
     <ul>
       <% flash.each do |key,value|%>
       <li><%= value %></li>
@@ -19,6 +22,7 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <div class="container">
       <%= yield %>
     </div>

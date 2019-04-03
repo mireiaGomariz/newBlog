@@ -34,6 +34,10 @@ gem 'pry-rails'
 gem 'rb-readline'
 
 
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

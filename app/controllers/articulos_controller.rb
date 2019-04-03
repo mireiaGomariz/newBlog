@@ -4,7 +4,7 @@ class ArticulosController < ApplicationController
   before_action :correct_autor, only: [:edit, :update, :destroy]
 
   def index
-    @articulos= Articulo.all.order("created_at DESC")
+    @articulos= Articulo.all.order("created_at DESC").paginate(page: params[:page], :per_page=>2)
   end
 
   def new
@@ -52,6 +52,6 @@ class ArticulosController < ApplicationController
 
   def correct_autor
     @articulo = current_autor.articulos.find_by(id: params[:id])
-    redirect_to articulos_path, notice: "No estas autorizado a editar este articulo" if @articuloñ.nil?
+    redirect_to articulos_path, notice: "No estas autorizado a editar este articulo" if @articulo.nil?
   end
 end
